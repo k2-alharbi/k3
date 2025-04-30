@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الصفحة الرئيسية</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 1.6em;
+      font-weight: bold;
+      background: linear-gradient(to left, rgba(255,255,255,0.1), rgba(0,0,0,0.4));
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      animation: fadeDown 1s ease-out forwards, glow 3s infinite alternate;
+      opacity: 0;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 2em;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      animation: fadeDown 1.2s ease-out forwards;
+      opacity: 0;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .oval-button {
+      background-color: rgba(0, 0, 0, 0.5); /* زر أغمق */
+      border: 2px solid white;
+      border-radius: 50px;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      color: white;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      text-shadow: 1px 1px 3px black; /* تحسين وضوح الخط */
+    }
+
+    .oval-button:hover {
+      background-color: white;
+      color: #4a148c;
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .grad-image {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      width: 80px;
+      opacity: 0;
+      animation: fadeInUp 1.2s ease-out 1.5s forwards;
+    }
+
+    @keyframes fadeDown {
+      0% { transform: translateY(-20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(40px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #fff, 0 0 10px #a0a0ff, 0 0 15px #9c27b0;
+      }
+      to {
+        text-shadow: 0 0 10px #fff, 0 0 15px #d0b0ff, 0 0 20px #7b1fa2;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>صلى على رسول الله</header>
+  <h2>مشروع التخرج</h2>
+
+  <div class="button-container">
+    <a href="1.html" class="oval-button">عنوان المشروع</a>
+    <a href="2.html" class="oval-button">المهام</a>
+    <a href="members.html" class="oval-button">الأعضاء</a>
+  </div>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Graduation_cap_icon.svg/512px-Graduation_cap_icon.svg.png" alt="قبعة تخرج" class="grad-image">
+
+</body>
+</html>
+
+ 
